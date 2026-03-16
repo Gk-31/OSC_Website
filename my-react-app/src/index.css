@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-bg: #181818;
+  --color-mid-bg: #232323;
+  --color-osc-orange: #fa9b46;
+  --font-serif: "Source Serif 4", serif;
+
+  /* Custom Linear Gradient */
+  --image-playlist-gradient: linear-gradient(
+    to bottom,
+    var(--color-dark-bg) 0%,
+    var(--color-mid-bg) 52%,
+    var(--color-dark-bg) 100%
+  );
+}
