@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="w-full  flex items-center justify-center gap-4 font-serif  absolute bottom-0 left-0 bg-[#181818] text-white">
+    <footer className="w-full  flex items-center justify-center gap-4 font-serif  static bottom-0 left-0 bg-[#181818] text-white">
       {/* Logo Section */}
       <div className="flex-shrink-0">
         <img 
