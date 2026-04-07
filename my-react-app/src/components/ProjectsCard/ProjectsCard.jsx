@@ -1,12 +1,14 @@
 import React from 'react';
+import Navbar from "../Navbar/Navbar";
 
 const ProjectsCard = ({ title, description, status, image }) => {
   const isActive = status === 'Active';
 
   return (
-    <div className="bg-[#f9fad6] rounded-2xl p-8 flex flex-col items-center text-black shadow-lg border border-black/5">
+   
+    <div className=" bg-[#f9fad6] rounded-2xl p-8 flex flex-col items-center text-black shadow-lg border border-black/5 ">
       {/* Project Image */}
-      <div className="w-full mb-6 flex justify-center rounded-2xl overflow-hidden aspect-video">
+      <div className=" w-full mb-6 flex justify-center rounded-50xl overflow-hidden aspect-video">
         <img 
           src={image} 
           alt={title} 

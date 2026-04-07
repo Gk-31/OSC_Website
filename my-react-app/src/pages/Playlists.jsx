@@ -5,10 +5,14 @@ import Navbar from "../components/Navbar/Navbar";
 
 const Playlists = () => {
   const categories = [
-    "Linux", "UI UX", 
-    "Frontend", "Game", 
-    "Backend", "Fluttter", 
-    "Blender", "HR"
+    { name: "Linux", url: "https://www.youtube.com/playlist?list=PLanhLNyaKYBmAWvj6rAjvXJTJnePxw9-C" },
+    { name: "UI UX", url: "https://youtube.com/..." },
+    { name: "Frontend", url: "https://youtube.com/..." },
+    { name: "Game", url: "https://www.youtube.com/playlist?list=PLanhLNyaKYBknf5g6olOAEYFMXYRA-ZAm" },
+    { name: "Backend", url: "https://www.youtube.com/playlist?list=PLanhLNyaKYBkU8ZthGC34txVunPHzjlIh" },
+    { name: "Flutter", url: "https://www.youtube.com/playlist?list=PLanhLNyaKYBkNj3xypRBlE-KBg3oW6xzX" },
+    { name: "Blender", url: "https://www.youtube.com/playlist?list=PLanhLNyaKYBn_ORjvoM2rkPkBfTi5ch7t" },
+    { name: "HR", url: "https://youtube.com/..." }
   ];
 
   return (
@@ -35,7 +39,7 @@ const Playlists = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-3xl">
 
           {categories.map((cat, index) => (
-            <PlaylistCard key={index} title={cat} />
+            <PlaylistCard key={index} title={cat.name} link={cat.url} />
           ))}
 
         </div>

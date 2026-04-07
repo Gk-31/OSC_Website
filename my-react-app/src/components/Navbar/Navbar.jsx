@@ -30,7 +30,7 @@ const Navbar = () =>
         <Link to="/" className={linkStyle("/")}>Home</Link>
         <Link to="/playlists" className={linkStyle("/playlists")}>Playlists</Link>
         <Link to="/recruit" className={linkStyle("/recruit")}>Recruit</Link>
-        <Link to="/projects" className={linkStyle("/projects")}>Projects</Link>
+        <Link to="/committees" className={linkStyle("/projects")}>Projects</Link>
         
         <span className="px-4 py-1 rounded-full border border-[#fa9b46]/50 text-[#fa9b46] opacity-50 cursor-not-allowed">
           Events

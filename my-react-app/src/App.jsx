@@ -7,6 +7,7 @@ import Projects from "./pages/Projects";
 import Home from "./pages/Home";
 import RecruitmentForm from "./pages/RecruitmentForm";
 import Events from "./pages/Events";
+import CommitteesGrid from "./pages/CommitteesGrid";
 
 
 
@@ -20,7 +21,9 @@ function App() {
         <Route path="/Playlists" element={<Playlists />} />
         <Route path="/apply" element={<RecruitmentForm />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/" element={<Playlists />} />
+        <Route path="/committees/projects" element={<Projects />} />
+        <Route path="/committees" element={<CommitteesGrid />} />
+      
 
       </Routes>
     </BrowserRouter>
