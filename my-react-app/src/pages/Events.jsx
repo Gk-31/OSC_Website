@@ -3,6 +3,7 @@ import EventCard from '../components/EventCard/EventCard';
 import EventRegistration from '../components/EventRegistration/EventRegistration';
 import Navbar from "../components/Navbar/Navbar";
 import Footer from '../components/Footer/Footer';
+
 const Events = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState("");
@@ -72,26 +73,24 @@ const Events = () => {
   ];
 
   return (
-    
-    // تقليل الـ py من 24 لـ 12 والـ px لـ 6
-    <div className="min-h-screen bg-dark-bg px-6 md:px-12 py-20 text-white font-sans selection:bg-osc-orange selection:text-dark-bg">
+    /* التعديل: أضفنا flex و flex-col و min-h-screen */
+    <div className="min-h-screen flex flex-col bg-dark-bg text-white font-sans selection:bg-osc-orange selection:text-dark-bg">
       <Navbar />
-      {/* تقليل المسافات بين السكاشن من space-y-32 لـ space-y-16 */}
-      <div className="max-w-6xl mx-auto space-y-12">
+      
+      {/* التعديل: أضفنا flex-grow لضمان تمدد المحتوى ودفع الفوتر للأسفل */}
+      <div className="flex-grow w-full max-w-6xl mx-auto px-6 md:px-12 py-10 space-y-12 mt-10">
 
         {/* Header Section */}
         <div className="space-y-2">
-          {/* تصغير العنوان من 7xl لـ 4xl أو 5xl */}
           <h1 className="text-4xl font-serif text-osc-orange tracking-tight leading-tight group">
             Upcoming Events<span className="text-white/20 ml-1 group-hover:text-osc-orange transition-colors duration-700">:-</span>
           </h1>
-          {/* تصغير الوصف من text-xl لـ text-lg وتقليل الـ max-w */}
           <p className="text-white/40 text-base font-medium tracking-wide max-w-xl border-l-2 border-osc-orange/30 pl-4">
             Join our upcoming expeditions into technology and community. Secure your spot now.
           </p>
         </div>
 
-        {/* Upcoming Section - تقليل الـ gap من 12 لـ 6 */}
+        {/* Upcoming Section */}
         <section>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {upcomingEvents.map((event, index) => (
@@ -100,7 +99,7 @@ const Events = () => {
           </div>
         </section>
 
-        {/* Separator Decor - تقليل الـ py */}
+        {/* Separator Decor */}
         <div className="flex items-center justify-center gap-3 py-4">
           <div className="h-px w-10 bg-osc-orange/20"></div>
           <div className="w-2 h-2 rounded-full border border-osc-orange/40"></div>
@@ -109,14 +108,12 @@ const Events = () => {
 
         {/* Finished Section */}
         <section className="pb-10">
-          {/* تقليل الـ mb من 20 لـ 10 */}
           <div className="flex flex-col md:flex-row md:items-end gap-3 mb-10">
             <h2 className="text-3xl font-serif text-white/40 tracking-tighter">
               Past Expeditions
             </h2>
             <p className="text-white/20 text-sm mb-1 italic">Moments that defined our journey</p>
           </div>
-          {/* تقليل الـ gap هنا برضه */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {finishedEvents.map((event, index) => (
               <EventCard key={index} {...event} isFinished={true} />
