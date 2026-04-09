@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import EventCard from '../components/EventCard/EventCard';
 import EventRegistration from '../components/EventRegistration/EventRegistration';
-
+import Navbar from "../components/Navbar/Navbar";
+import Footer from '../components/Footer/Footer';
 const Events = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState("");
@@ -71,8 +72,10 @@ const Events = () => {
   ];
 
   return (
+    
     // تقليل الـ py من 24 لـ 12 والـ px لـ 6
-    <div className="min-h-screen bg-dark-bg px-6 md:px-12 py-10 text-white font-sans selection:bg-osc-orange selection:text-dark-bg">
+    <div className="min-h-screen bg-dark-bg px-6 md:px-12 py-20 text-white font-sans selection:bg-osc-orange selection:text-dark-bg">
+      <Navbar />
       {/* تقليل المسافات بين السكاشن من space-y-32 لـ space-y-16 */}
       <div className="max-w-6xl mx-auto space-y-12">
 
@@ -122,19 +125,7 @@ const Events = () => {
         </section>
       </div>
 
-      {/* Footer Branding - تصغير الاحجام */}
-      <footer className="mt-16 border-t border-white/5 pt-8 pb-6 text-center text-white/30 space-y-3">
-        <div className="flex items-center justify-center gap-3">
-          <div className="w-10 h-10 bg-osc-orange rounded-lg flex items-center justify-center text-dark-bg font-black text-xl shadow-md">
-            O
-          </div>
-          <div className="text-left font-serif">
-            <div className="text-white text-md font-bold leading-tight">Open Source Community</div>
-            <div className="text-[10px] tracking-widest text-osc-orange/60 font-sans uppercase">FCIS Student Activity</div>
-          </div>
-        </div>
-        <p className="text-xs">Copyright OSC © {new Date().getFullYear()} All rights reserved</p>
-      </footer>
+      <Footer />
 
       <EventRegistration
         isOpen={modalOpen}

@@ -1,11 +1,11 @@
 import Navbar from "../components/Navbar/Navbar";
 
-
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
  
   return (
-    <div className="min-h-screen flex flex-col bg-[#181818] text-white font-serif pt-24 px-14 relative">
+    <div className="min-h-screen flex flex-col bg-[#181818] text-white font-serif pt-24 px-4 md:px-14 relative px-4 md:px-14">
       
       <Navbar />
 
@@ -13,10 +13,10 @@ const Home = () => {
       <div className="flex-1">
 
         {/* HERO */}
-        <div className="mt-10 max-w-7xl mx-auto flex items-start justify-between">
+        <div className="mt-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
 
           {/* LEFT */}
-          <div className="w-[58%]">
+          <div className="w-full md:w-[58%]">
 
             {/* Title */}
             <div className="flex items-center gap-3 mb-4">
@@ -40,7 +40,7 @@ const Home = () => {
           </div>
 
           {/* RIGHT (WHEEL) */}
-          <div className="w-[42%] flex justify-end pr-5">
+          <div className="w-full md:w-[42%] flex justify-center md:justify-end">
             <img
               src="/Wheel.png"
               alt="wheel"
@@ -84,17 +84,17 @@ const Home = () => {
             Our Committees
           </h2>
 
-          <div className="flex justify-between gap-10">
+          <div className="flex flex-col md:flex-row gap-10">
 
             {/* LEFT */}
-            <div className="flex flex-col gap-6 w-[50%]">
+            <div className="flex flex-col gap-8 w-full md:w-[50%]">
 
               <div className="border border-[#e08a3c]/30 p-6 rounded-xl max-w-[600px] w-full shadow-[0_0_10px_rgba(224,138,60,0.15)]">
                 <h3 className="text-[#e08a3c] text-[25px] mb-2">Linux</h3>
                 <p className="text-gray-300 text-[18px]">
                   A place for all Linux enthusiasts. We are a group of enthusiastic Linux users who are dedicated to providing a comprehensive guide to the Linux Shell, 
-                  from beginner to advanced levels. Our goal is to teach people how to efficiently use the shell,
-                  as well as how to become familiar with Git and provide information on various networking concepts and cyber security.
+                  from beginner to advanced levels. Our goal is to teach people how to efficiently use the shell.
+                  {/* as well as how to become familiar with Git and provide information on various networking concepts and cyber security. */}
                 </p>
               </div>
 
@@ -103,7 +103,8 @@ const Home = () => {
                 <p className="text-gray-300 text-[18px]">
                   Explore the core of Computer science while mastering various Technologies,
                   witness the power of software development and learn how to build powerful software 
-                  at science and tech Committe by collaborating on open source team projects and sharing your knowledge with your colleagues.
+                   at science and tech Committe.
+                   {/*by collaborating on open source team projects and sharing your knowledge with your colleagues. */}
                 </p>
               </div>
 
@@ -119,14 +120,14 @@ const Home = () => {
             </div>
 
             {/* CENTER */}
-            <div className="flex flex-col justify-center gap-8 w-[20%] ">
+            <div className="flex flex-col justify-center gap-8 w-full md:w-[20%] items-center ">
               <div className="bg-[#e08a3c] text-black  px-12 py-18   rounded-2xl font-bold text-lg shadow-[0_0_25px_rgba(224,128,60,0.3)]">
                 TECHNICAL
               </div>
             </div>
 
             {/* RIGHT */}
-            <div className="flex flex-col gap-14 w-[50%]">
+            <div className="flex flex-col gap-10 w-full md:w-[50%]">
 
               <div className="border border-[#e08a3c]/30 p-6 rounded-xl max-w-[600px] w-full shadow-[0_0_10px_rgba(224,138,60,0.15)]">
                 <h3 className="text-[#e08a3c] text-[25px] mb-2">Front-end</h3>
@@ -161,10 +162,10 @@ const Home = () => {
         </div>
 
         {/* NON TECHNICAL + CREATIVE */}
-        <div className="mt-20 max-w-7xl mx-auto flex justify-between gap-10 items-center">
+        <div className="mt-20 max-w-7xl mx-auto flex flex-col md:flex-row gap-10 items-center">
 
         {/* LEFT */}
-        <div className="flex flex-col gap-8 w-[50%]">
+        <div className="flex flex-col gap-8 w-full md:w-[50%]">
 
             <div className="border border-[#e08a3c]/30 p-6 rounded-xl max-w-[600px] w-full shadow-[0_0_10px_rgba(224,138,60,0.15)]">
             <h3 className="text-[#e08a3c] text-[25px] mb-2">HR</h3>
@@ -180,27 +181,27 @@ const Home = () => {
             <p className="text-gray-300 text-[18px] leading-7">
                 Explore the core of Computer science while mastering various Technologies, 
                 witness the power of software development and learn how to build powerful software
-                at science and tech Committe by collaborating on open source team projects and sharing your knowledge with your colleagues.
-            </p>
+                at science and tech Committe. 
+                </p>
             </div>
 
         </div>
 
         {/* CENTER */}
-        <div className="flex flex-col items-center gap-30 w-[20%]">
+        <div className="flex flex-col justify-center gap-9 w-full md:w-[20%] items-center">
 
-            <div className="bg-[#e08a3c] text-black px-12 py-8 rounded-2xl font-bold text-lg shadow-[0_0_20px_rgba(224,138,60,0.4)]">
+            <div className="bg-[#e08a3c] text-black  px-12 py-14 my-10   rounded-2xl font-bold text-lg shadow-[0_0_25px_rgba(224,128,60,0.3)]">
             NON-TECHNICAL
             </div>
 
-            <div className="bg-[#e08a3c] text-black px-12 py-10 rounded-2xl font-bold text-lg shadow-[0_0_20px_rgba(224,138,60,0.4)]">
+            <div className="bg-[#e08a3c] text-black  px-12 py-14 my-10 rounded-2xl font-bold text-lg shadow-[0_0_25px_rgba(224,128,60,0.3)]">
             CREATIVE
             </div>
 
         </div>
 
         {/* RIGHT */}
-        <div className="flex flex-col gap-6 w-[50%]">
+        <div className="flex flex-col gap-9 w-full md:w-[50%]">
 
             <div className="border border-[#e08a3c]/30  p-6 rounded-xl max-w-[600px] w-full shadow-[0_0_10px_rgba(224,138,60,0.15)]">
             <h3 className="text-[#e08a3c] text-[25px] mb-2">PR</h3>
@@ -211,9 +212,9 @@ const Home = () => {
             </p>
             </div>
 
-            <div className="border border-[#e08a3c]/30 p-6 rounded-xl max-w-[600px] w-full shadow-[0_0_10px_rgba(224,138,60,0.15)]">
+            <div className="border border-[#e08a3c]/30 p-6 my--7 rounded-xl max-w-[600px] w-full shadow-[0_0_10px_rgba(224,138,60,0.15)]">
             <h3 className="text-[#e08a3c] text-[25px] mb-2">Blender</h3>
-            <p className="text-gray-300 text-[18px] leading-7">
+            <p className="text-gray-300 text-[18px] leading-8">
                 The engine behind the web. We specialize in building robust and scalable server-side applications using Node.js, 
                 focusing on APIs, databases,
                 and system architecture to power dynamic and secure web solutions.
@@ -226,7 +227,7 @@ const Home = () => {
 
 
         {/* MEDIA SECTION */}
-        <div className="mt-20 max-w-3xl mx-auto">
+        <div className="mt-20 max-w-3xl mx-auto my-20">
 
         <div className="border border-[#e08a3c]/30 p-6 rounded-xl shadow-[0_0_10px_rgba(224,138,60,0.15)] text-center">
             
@@ -245,22 +246,7 @@ const Home = () => {
 
       </div>
 
-      {/* FOOTER */}
-      <div className="mt-auto flex justify-end pr-5 pb-10">
-        <div className="flex items-center gap-3">
-
-          <img src="/Lock.png" alt="logo" className="w-10" />
-
-          <div className="text-[#e08a3c] text-sm leading-5">
-            <p>Open Source Community</p>
-            <p>FCIS Student Activity</p>
-            <p className="text-gray-400 text-xs mt-2">
-              Copy right OSC ©2024 All rights are reserved
-            </p>
-          </div>
-
-        </div>
-      </div>
+      <Footer/>
 
     </div>
   );

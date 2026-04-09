@@ -1,19 +1,19 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState,useEffect } from "react";
 const Navbar = () => 
 {
   const location = useLocation();
-  const [isLight, setIsLight] = useState(false);
 
-  useEffect(() => {
-    const root = document.documentElement;
 
-    if (isLight) {
-      root.classList.add("light");
-    } else {
-      root.classList.remove("light");
-    }
-  }, [isLight]);
+  // useEffect(() => {
+  //   const root = document.documentElement;
+
+  //   if (isLight) {
+  //     root.classList.add("light");
+  //   } else {
+  //     root.classList.remove("light");
+  //   }
+  // }, [isLight]); 
+  ;
 
 
   const linkStyle = (path) =>
@@ -31,28 +31,12 @@ const Navbar = () =>
         <Link to="/playlists" className={linkStyle("/playlists")}>Playlists</Link>
         <Link to="/recruit" className={linkStyle("/recruit")}>Recruit</Link>
         <Link to="/committees" className={linkStyle("/projects")}>Projects</Link>
-        
-        <span className="px-4 py-1 rounded-full border border-[#fa9b46]/50 text-[#fa9b46] opacity-50 cursor-not-allowed">
-          Events
-        </span>
+        <Link to="/events" className={linkStyle("/events")}>Events</Link>
+       
 
-        
-        <span className="px-4 py-1 rounded-full border border-[#fa9b46]/50 text-[#fa9b46] opacity-50 cursor-not-allowed">
-          Memories
-        </span>
-
-        <span className="px-4 py-1 rounded-full border border-[#fa9b46]/50 text-[#fa9b46] opacity-50 cursor-not-allowed">
-          Contact Us
-        </span>
       </div>    
       <div className="flex items-center gap-3">
-        <button
-          onClick={() => setIsLight(!isLight)}
-          className="text-xl"
-        >
-          {isLight ? "🌙" : "☀️"}
-        </button>
-
+        <img src="/Lock.png" alt="logo" className="w-7" />
         <h1 className="text-xl md:text-2xl text-[#fa9b46] font-bold">
           OSC
         </h1>

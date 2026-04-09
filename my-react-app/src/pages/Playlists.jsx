@@ -71,7 +71,7 @@ const Playlists = () => {
         <img src="/Playlist.png" alt="decoration" className="w-[500px]" />
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto my-10 relative z-10">
         {/* Header Section */}
         <div className="flex items-center gap-3 mb-12">
           <span className="text-3xl "><img src="/group.svg" alt="lock" /></span> 
@@ -79,7 +79,7 @@ const Playlists = () => {
         </div>
 
         {/* Grid System */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-20 gap-x-130 max-w-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-20 gap-x-130 max-w-2xl ">
           {categories.map((cat, index) => (
             <PlaylistCard key={index} title={cat.name} link={cat.url} />
           ))}
