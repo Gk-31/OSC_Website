@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar/Navbar";
 
 const Recruit = () => {
   return (
-    <div className="min-h-screen bg-[#181818] my-10 text-white font-serif pt-24 px-8 md:px-16 relative overflow-hidden">
+    <div className="min-h-screen bg-[#181818] my-15 text-white font-serif pt-24 px-8 md:px-16 relative overflow-hidden">
       
       <Navbar />
 
