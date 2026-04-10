@@ -67,7 +67,7 @@ const RecruitmentForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFF8E7] flex flex-col items-center justify-center py-2 px-4 font-sans text-right">
+    <div className="min-h-screen bg-[#FFF8E7] flex flex-col items-center justify-center m-10 py-2 px-4 font-sans text-right">
       <div className="w-full max-w-2xl bg-white/50 backdrop-blur-sm p-5 sm:p-8 rounded-[2rem] shadow-xl border border-[#FA9B46]/20">
 
         <header className="mb-6 text-center sm:text-left">
