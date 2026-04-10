@@ -37,7 +37,7 @@ const Navbar = () =>
       </div>    
       <div className="flex items-center gap-3">
         <img src="/Lock.png" alt="logo" className="w-7" />
-        <h1 className="text-xl md:text-2xl text-[#fa9b46] font-bold">
+        <h1 className="text-xl mx-3 md:text-2xl text-[#fa9b46] font-bold">
           OSC
         </h1>
       </div>
