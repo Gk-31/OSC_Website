@@ -93,7 +93,7 @@ const Events = () => {
 
   return (
     /* التعديل: أضفنا flex و flex-col و min-h-screen */
-    <div className="min-h-screen flex flex-col bg-dark-bg text-white font-sans my-10 selection:bg-osc-orange selection:text-dark-bg">
+    <div className="min-h-screen flex flex-col bg-dark-bg text-white font-sans my-15 selection:bg-osc-orange selection:text-dark-bg">
       <Navbar />
 
       {/* التعديل: أضفنا flex-grow لضمان تمدد المحتوى ودفع الفوتر للأسفل */}
