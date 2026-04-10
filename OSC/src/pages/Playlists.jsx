@@ -16,7 +16,7 @@ const Playlists = () => {
   ];
 
 return (
-    <div className="min-h-screen flex flex-col bg-[#181818] my-10 text-white font-serif relative overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-[#181818] my-15 text-white font-serif relative overflow-hidden">
       <Navbar />
 
       {/* Decorative Image - Background */}
