@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 const Home = () => {
  
   return (
-    <div className="min-h-screen flex flex-col bg-[#181818] text-white font-serif pt-24 px-4 md:px-14 relative px-4 md:px-14">
+    <div className="min-h-screen flex flex-col bg-[#181818] text-white font-serif pt-24 px-4 my-10 md:px-14 relative px-4 md:px-14">
       
       <Navbar />
 
