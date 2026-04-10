@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import CustomSelect from '../components/ComitteeSelect/ComitteeSelect';
+
 
 const RecruitmentForm = () => {
   const [formData, setFormData] = useState({
@@ -16,7 +18,7 @@ const RecruitmentForm = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-
+const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -48,6 +50,7 @@ const RecruitmentForm = () => {
 
       if (response.ok) {
         alert("Application submitted successfully!");
+        navigate("/")
       } else {
         const errorMessage = Array.isArray(result.message) 
           ? result.message.join("\n") 
@@ -63,6 +66,7 @@ const RecruitmentForm = () => {
   return (
     <div className="min-h-screen bg-[#FFF8E7] flex flex-col items-center justify-center py-2 px-4 font-sans text-right">
       <div className="w-full max-w-2xl bg-white/50 backdrop-blur-sm p-5 sm:p-8 rounded-[2rem] shadow-xl border border-[#FA9B46]/20">
+      
         <header className="mb-6 text-center sm:text-left">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-[#333] tracking-tight">
             OSC <span className="text-[#F39148]">Recruitment</span>
